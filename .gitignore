@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.output/
+.wxt/
+.wrangler/
+*.log
+.DS_Store
+
+# Environment files containing secrets
+.env
+.env.*
+!.env.example
+.dev.vars
+
+# Local working notes
+START.md

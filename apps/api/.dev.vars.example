@@ -1,0 +1,5 @@
+# Local development secrets for the API. NEVER commit real values.
+DATABASE_URL=postgres://user:password@ep-example.eu-central-1.aws.neon.tech/bookmark_sync?sslmode=require
+
+# Set to 1 to disable POST /auth/dev/register (do this before exposing publicly)
+# DISABLE_DEV_AUTH=1

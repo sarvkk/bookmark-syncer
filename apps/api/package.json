@@ -1,0 +1,23 @@
+{
+  "name": "@syncer/api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "bun src/dev-server.ts",
+    "deploy": "bun --bun wrangler deploy",
+    "build": "bun --bun wrangler deploy --dry-run --outdir dist",
+    "typecheck": "tsc --noEmit -p ."
+  },
+  "dependencies": {
+    "@syncer/db": "workspace:*",
+    "@syncer/shared": "workspace:*",
+    "@syncer/sync": "workspace:*",
+    "drizzle-orm": "^0.44.0",
+    "hono": "^4.6.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.0.0",
+    "wrangler": "^4.0.0"
+  }
+}

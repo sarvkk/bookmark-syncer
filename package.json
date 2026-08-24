@@ -1,0 +1,22 @@
+{
+  "name": "bookmark-sync",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "typecheck": "tsc --noEmit -p packages/shared && tsc --noEmit -p packages/sync && tsc --noEmit -p packages/db && tsc --noEmit -p apps/api && tsc --noEmit -p apps/web && bun run --cwd apps/extension typecheck",
+    "test": "bun test",
+    "build": "bun run --cwd apps/api build && bun run --cwd apps/web build && bun run --cwd apps/extension build",
+    "dev:api": "bun run --cwd apps/api dev",
+    "dev:extension": "bun run --cwd apps/extension dev",
+    "dev:extension:firefox": "bun run --cwd apps/extension dev:firefox",
+    "dev:web": "bun run --cwd apps/web dev"
+  },
+  "devDependencies": {
+    "postgres": "^3.4.9",
+    "typescript": "^5.6.0"
+  }
+}

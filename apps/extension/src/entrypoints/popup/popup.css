@@ -1,0 +1,75 @@
+:root {
+  color-scheme: light dark;
+  font-family: system-ui, sans-serif;
+  font-size: 13px;
+}
+
+body {
+  margin: 0;
+  min-width: 280px;
+}
+
+.popup {
+  padding: 12px;
+}
+
+h1 {
+  font-size: 15px;
+  margin: 0 0 10px;
+}
+
+dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 4px 12px;
+  margin: 0 0 12px;
+}
+
+dt {
+  color: gray;
+}
+
+dd {
+  margin: 0;
+}
+
+.ok { color: #1a7f37; }
+.warn { color: #b58900; }
+.error, .error.detail { color: #c62828; }
+.muted { color: gray; }
+
+.setup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+input {
+  padding: 6px 8px;
+}
+
+button {
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.hint {
+  color: gray;
+  margin: 0;
+  font-size: 11px;
+}
+
+.detail {
+  font-size: 11px;
+  word-break: break-all;
+}
+
+@media (prefers-color-scheme: dark) {
+  .ok { color: #4ec96a; }
+  .error, .error.detail { color: #ff7a7a; }
+}

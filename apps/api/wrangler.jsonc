@@ -1,0 +1,13 @@
+// wrangler configuration for the sync API worker.
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "bookmark-sync-api",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-07-01",
+  // The db package bundles a TCP driver fallback for non-Neon databases;
+  // its Node built-ins require this flag even when unused at runtime.
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": {
+    "enabled": true
+  }
+}

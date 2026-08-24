@@ -1,0 +1,19 @@
+{
+  "name": "@syncer/sync",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit -p .",
+    "test": "bun test"
+  },
+  "dependencies": {
+    "@syncer/shared": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.4.0"
+  }
+}
